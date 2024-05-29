@@ -32,3 +32,43 @@ git remote set-url origin 레포주소
 
 # git 설정 정보 조회
 git config --list
+
+## 타인 레포 clone 방법 2가지
+# 1) 커밋이력 그대로 가져오기
+git clone 타인레포주소
+#해당 폴더로 이동 후 git 명령어 쓰는 것
+git remote set-url origin 내 레포
+# 별도의 add, commit 필요 없고 바로 push 가능
+git push origin master(또는 name)
+
+# 2) 커밋이력 없이 가져오기
+git clone 타인레포주소
+# 해당 폴더로 이동 후에 .git 폴더 삭제
+git init
+git remote add origin 내 레포주소
+git add .
+git commit -m "first project"
+git push origin master
+
+# 강사님 repo에서 아무거나 제 repo로 갖고가기
+# 1. commitId를 다 유지한채 가져가기(팀 작업 후 가져가기)
+=> git remote set-url origin 내 레포주소
+=> push origin master
+# fork 하면 안 됨. 그건 내가 한 게 아니라 오픈소스 프로젝트에 기여하고 싶은데 push하고 싶은 권한이 없으므로 pull request 하려고 하는 것
+# 2. commitId 전부 없애고 내 레포인것처럼 가져가기
+=> 받은 다음
+=> .git 폴더
+=> git init
+=> git remote add origin 내레포
+=> git add .
+=> git commit
+=> git push origin master
+
+# 사용자 지정 방법
+# 전역적 사용자(이름, email) 지정
+git config --global user.name "kimseonguk197"
+git config --global user.email "이메일"
+
+
+# 지역적 사용자(이름, email) 지정
+dkdkdkdkdkdkdkdkdkdkd
