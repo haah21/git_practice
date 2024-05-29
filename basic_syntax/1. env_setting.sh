@@ -72,3 +72,4 @@ git config --global user.email "이메일"
 
 # 지역적 사용자(이름, email) 지정
 dkdkdkdkdkdkdkdkdkdkd
+sdlfelsfjklawe
