@@ -107,3 +107,41 @@ git push origin v1.0
 
 #태그 목록 조회
 git tag
+
+# 저장한 작업사항 목록조회
+git stash list
+# 저장한 작업목록 상세조회
+git stash show -p 인덱스
+# 저장한 stash 목록 전체 삭제
+git stash clear
+
+# 버전 명시 tagging
+git tag v1.0
+git tag v1.0 -m "1. 주요사항 ~ 2. 주요사항 ~"
+
+# tag release 배포
+# commit 푸시와 상관없이 태그(release) 별도 push
+git push origin v1.0
+
+# 태그 목록 조회
+git tag
+
+# 브랜치 생성
+# 현재 checkout 하고 있는 브랜치를 기준으로 브랜치 생성
+git branch 브랜치명
+
+
+#해당 프랜치로 전환
+git checkout 브랜치명
+
+#브랜치 목록 조회
+git branch
+
+#원격 브랜치까지 조회
+git branch --all
+
+#회원 관리를 위한 branch 생성
+git branch feature/author_register
+
+# branch 로컬에서 만듦 -> origin 기준의 최신상태에서 만든 branch가 아닐 수 있음
+# origin에서 branch 만든 다음 local에서 받아가는 상황이 일반적!
