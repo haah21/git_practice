@@ -70,3 +70,13 @@ git diff A브랜치 B브랜치
 # git fetch
 # 원격에 변경사항을 로컬에 가져오되 병합은 하지 않는 것
 # 비교 : git pull origin master와 git fetch origin master 비교
+
+# git stash : 작업 중인 사항을 임시저장
+# 작업중인 사항을 임시저장
+git stash
+# 저장한 최신의 작업목록 꺼내기
+git stash pop 
+# 저장한 작업사항 목록조회
+git stash list
+# 저장한 작업목록 상세조회
+git stash show -p 인덱스
