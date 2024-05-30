@@ -107,3 +107,22 @@ git push origin v1.0
 
 #태그 목록 조회
 git tag
+
+# branch 생성
+# 현재 checkout 하고 있는 브랜치를 기준으로 브랜치 생성
+git branch 브랜치명
+
+# 해당 프랜치로 전환
+git checkout 브랜치명
+
+# 브랜치 목록 조회
+git branch
+
+# 원격 브랜치까지 조회
+git branch --all
+
+# 회원 관리를 위한 branch 생성
+git branch feature/author_register
+
+# branch 로컬에서 만듦 -> origin 기준의 최신상태에서 만든 branch가 아닐 수 있음
+# origin에서 branch 만든 다음 local에서 받아가는 상황이 일반적!
