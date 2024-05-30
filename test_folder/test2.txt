@@ -1,5 +1,9 @@
 heyyyy
+<<<<<<< HEAD
 fast-forward
+=======
+locco
+>>>>>>> b700e87a8fda51b2ca69605566e6704cf8757cf7
 
 helloworld22
 helloworld23
