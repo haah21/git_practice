@@ -33,11 +33,13 @@ git log --graph
 
 # 원격저장소로 업로드
 git push origin 브랜치명
+
 # 충돌 무시하고 강제 push
 git push origin master --force
 
 # 특정 commit id로의 전환
 git checkout 커밋아이디
+
 #다시 현재의 master(브렌치)의 commit으로 return
 git checkout master
 
@@ -48,15 +50,20 @@ git pull origin 브랜치명
 # working directory에서의 취소
 # 수정 사항만 취소
 git checkout .
+
 # working directory에서 추가파일 취소
 git clean --fdx
+
 # working directory 수정사항&추가파일 동시에 취소
 git checkout . | git clean --fdx
+
 # staging area에서의 취소
 git reset
+
 # commit 이후의 취소
 git reset HEAD~1
 git reset HEAD^
+
 # push 이후의 취소
 git revert 커밋ID
 
@@ -74,13 +81,29 @@ git diff A브랜치 B브랜치
 # git stash : 작업 중인 사항을 임시저장
 # 작업중인 사항을 임시저장
 git stash
+
 # 저장한 최신의 작업목록 꺼내기
 git stash pop 
+
 # 저장한 목록은 놔둔채 작업목록 적용
 git stash apply stash@인덱스값
+
 # 저장한 작업사항 목록조회
 git stash list
+
 # 저장한 작업목록 상세조회
 git stash show -p 인덱스
+
 # 저장한 stash 목록 전체 삭제
 git stash clear
+
+# 버전 명시 tagging
+git tag v1.0
+git tag v1.0 -m "1. 주요사항1 2.주요사항2"
+
+# tag release 배포
+# commit push와 상관없이 태그(tag)는 별도 push
+git push origin v1.0
+
+#태그 목록 조회
+git tag
